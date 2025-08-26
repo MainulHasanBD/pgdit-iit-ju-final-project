@@ -1,4 +1,4 @@
-# Coaching Center(HRMS) | PGDIT IIT (Jahangirnagar University)
+# Coaching Center(HRMS) | PGDIT Final Project [IIT (Jahangirnagar University)]
 
 A comprehensive web-based application for managing human resources in coaching centers.
 
