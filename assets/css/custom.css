@@ -1,0 +1,297 @@
+/* Custom CSS additions for header fixes */
+
+/* Body padding to account for fixed navbar */
+body {
+    padding-top: 64px;
+}
+
+/* Navbar enhancements */
+.navbar {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand:hover {
+    color: #1565c0 !important;
+}
+
+/* User dropdown enhancements */
+.username {
+    font-weight: 500;
+    margin-right: 4px;
+}
+
+/* Mobile improvements */
+@media (max-width: 576px) {
+    .navbar .d-flex {
+        padding: 0 15px;
+    }
+    
+    .navbar-brand {
+        font-size: 16px;
+    }
+    
+    .username {
+        display: none;
+    }
+    
+    .nav-link {
+        padding: 10px;
+    }
+}
+
+/* Dark mode support (optional) */
+@media (prefers-color-scheme: dark) {
+    .navbar {
+        background: #1e1e1e;
+        border-bottom-color: #333;
+    }
+    
+    .navbar-brand,
+    .nav-link {
+        color: #fff !important;
+    }
+    
+    .dropdown-menu {
+        background: #2d2d2d;
+        border-color: #444;
+    }
+    
+    .dropdown-item {
+        color: #fff;
+    }
+    
+    .dropdown-item:hover {
+        background-color: #444;
+    }
+}
+
+/* Animation improvements */
+.nav-link,
+.dropdown-item,
+.navbar-toggle {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Focus states for accessibility */
+.nav-link:focus,
+.dropdown-item:focus,
+.navbar-toggle:focus {
+    outline: 2px solid #1976d2;
+    outline-offset: 2px;
+}
+
+/* ===== FOOTER STYLES ===== */
+.main-footer {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-content {
+    padding: 30px 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-copyright p {
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-tagline {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    font-size: 12px;
+}
+
+.version-badge {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer-links {
+    font-size: 13px;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.separator {
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0 8px;
+}
+
+.footer-extra {
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 12px;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-indicator {
+    color: #4caf50;
+    animation: pulse 2s infinite;
+}
+
+.status-indicator.online {
+    color: #4caf50;
+}
+
+.status-indicator.offline {
+    color: #f44336;
+}
+
+.user-role {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+/* Footer Wave Animation */
+.footer-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    opacity: 0.3;
+}
+
+.footer-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 40px;
+    fill: rgba(255, 255, 255, 0.1);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: none;
+}
+
+.scroll-to-top:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Modal Enhancements */
+.help-section, .about-content {
+    margin-bottom: 20px;
+}
+
+.help-section h6 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.features-list ul li {
+    padding: 5px 0;
+    text-align: left;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 20px 0 15px;
+    }
+    
+    .footer-info {
+        text-align: left !important;
+        margin-top: 15px;
+    }
+    
+    .footer-extra .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 10px;
+    }
+    
+    .footer-links {
+        margin-top: 10px;
+    }
+    
+    .separator {
+        display: none;
+    }
+    
+    .footer-link {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-wave svg {
+        height: 25px;
+    }
+    
+    .scroll-to-top {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    .main-footer {
+        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .main-footer,
+    .scroll-to-top {
+        display: none;
+    }
+}
+

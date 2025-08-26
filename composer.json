@@ -1,0 +1,22 @@
+{
+    "name": "coaching-center/hr-system",
+    "description": "Complete HR Management System for Coaching Centers",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.4",
+        "phpoffice/phpspreadsheet": "^1.28",
+        "dompdf/dompdf": "^2.0",
+        "phpmailer/phpmailer": "^6.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "CoachingCenterHR\\": "src/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php install/setup.php"
+        ]
+    }
+}
